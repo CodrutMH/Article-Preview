@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-size: 13px;
+}
+body {
+  font-family: Manrope;
+  background-color: hsl(210, 46%, 95%);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+  width: 730px;
+  background-color: white;
+  display: flex;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.drawers-img {
+  width: 300px;
+  height: 290px;
+  display: block;
+  border-radius: 10px 0px 0px 10px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 2rem 2.5rem;
+  flex: 1;
+}
+h2 {
+  font-size: 20px;
+  color: hsl(217, 19%, 35%);
+  font-weight: 700;
+}
+.info {
+  color: hsl(214, 17%, 51%);
+  font-weight: 500;
+  letter-spacing: 0.25px;
+  line-height: 1.5rem;
+}
+.person-card {
+  margin-top: 1rem;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+.person-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+.person-info > .name {
+  font-weight: 700;
+  color: hsl(217, 19%, 35%);
+}
+.person-info > .date {
+  color: hsl(214, 17%, 51%);
+}
+.person {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.person > img {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+}
+.share-btn {
+  border-radius: 50%;
+  background-color: hsl(210, 46%, 95%);
+  padding: 10px;
+  cursor: pointer;
+}
+.share-btn:hover {
+  background-color: hsl(217, 19%, 35%);
+  color: hsl(210, 46%, 95%);
+}
+.share-bar-container {
+  background-color: hsl(217, 19%, 35%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding: 15px 50px;
+  width: 250px;
+  border-radius: 10px;
+  position: absolute;
+  top: -75px;
+  left: 220px;
+}
+.share {
+  color: hsl(212, 23%, 69%);
+  letter-spacing: 0.25rem;
+}
+
+.share-bar-icons {
+  display: flex;
+  gap: 1rem;
+}
+
+.display-none {
+  display: none;
+}
+
+/* MEDIA QUERIES */
+@media screen and (max-width: 767px) {
+  main {
+    width: 350px;
+    flex-direction: column;
+  }
+
+  .drawers-img {
+    width: 100%;
+    border-radius: 10px 10px 0px 0px;
+  }
+  .content {
+    padding: 0;
+  }
+
+  h2,
+  .info {
+    padding: 2rem 2rem 0rem 2rem;
+  }
+  .info {
+    padding: 0rem 2rem;
+  }
+
+  .share-bar-container {
+    position: static;
+    width: 100%;
+    border-radius: 0 0 10px 10px;
+    padding: 1rem;
+    justify-content: space-between;
+  }
+
+  .person-card {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 0rem 2rem 2rem 2rem;
+  }
+}
